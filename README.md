@@ -16,9 +16,8 @@ Create the directory `~/.config/i3`
 
 Link files to home directory
 
-    ln -isv "~/.dot/i3/bin/*" "$HOME/bin"
-    ln -isv "~/.dot/i3/{config,*.conf}" "$HOME/.config/i3"
-    ln -isv "~/.dot/i3/.wallpaper" "$HOME/.wallpaper"
+    ln -isv "~/.dot/i3/{bin,config,*.conf}" "$HOME/.config/i3"
+    ln -isv "~/.dot/i3/{.Xresources.d,.wallpaper}" "$HOME"
 
 ## Resources
 

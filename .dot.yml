@@ -21,8 +21,8 @@ role:
     - qt4
   # cp /etc/X11/xinit/xinitrc ~/.xinitrc
   link:
-    - "bin:bin"
+    - "bin:.config/i3/bin"
     - "config:.config/i3"
     - "*.conf:.config/i3"
-    - "Xresources.d:Xresources.d"
+    - ".Xresources.d:.Xresources.d"
     - ".wallpaper:.wallpaper"
