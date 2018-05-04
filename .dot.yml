@@ -6,6 +6,7 @@ role:
     - feh # background manager & image viewer
     - i3-wm # window manager
     - i3blocks
+    - i3status
     # - libnotify
     - lxappearance # gnome-themes-standard / gtk3
     - rofi # window switcher
