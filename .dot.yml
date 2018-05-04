@@ -4,7 +4,8 @@ role:
     - alsa-utils # gnome-alsamixer / pavucontrol (PulseAudio)
     - compton # composite manager
     - feh # background manager & image viewer
-    - i3 # window manager
+    - i3-wm # window manager
+    - i3blocks
     # - libnotify
     - lxappearance # gnome-themes-standard / gtk3
     - rofi # window switcher
@@ -27,9 +28,9 @@ role:
   #   - i3blocks # Not available on ARM
   #   # - system-san-francisco-font-git
   install:
-    - "yaourt -Sq --noconfirm i3cat-git i3blocks"
+    - "yaourt -S --noconfirm i3cat-git"
   remove:
-    - "yaourt -R --noconfirm i3cat-git i3blocks"
+    - "yaourt -R --noconfirm i3cat-git"
   # cp /etc/X11/xinit/xinitrc ~/.xinitrc
   link:
     - "bin:.config/i3/bin"
