@@ -30,9 +30,13 @@ role:
   #   # - system-san-francisco-font-git
   install:
     - "hash i3cat 2>/dev/null || yaourt -S --noconfirm i3cat-git"
+    # - "yaourt -S --noconfirm arc-{firefox,icon,gtk}-theme"
   remove:
     - "hash i3cat 2>/dev/null && yaourt -R --noconfirm i3cat-git"
+    # - "yaourt -R --noconfirm arc-{firefox,icon,gtk}-theme"
   # cp /etc/X11/xinit/xinitrc ~/.xinitrc
+  # localectl set-keymap fr --no-convert
+  # localectl set-x11-keymap fr macintosh
   link:
     - ".config/i3/*:.config/i3"
     - ".Xresources"

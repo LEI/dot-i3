@@ -2,3 +2,4 @@
 
 #include ".Xresources.d/colors/solarized-dark"
 #include ".Xresources.d/rofi"
+#include ".Xresources.d/rxvt-unicode"
