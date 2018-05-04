@@ -27,9 +27,9 @@ role:
   #   - i3blocks # Not available on ARM
   #   # - system-san-francisco-font-git
   install:
-    - "yaourt -S i3cat-git i3blocks"
+    - "yaourt -Sq --noconfirm i3cat-git i3blocks"
   remove:
-    - "yaourt -R i3cat-git i3blocks"
+    - "yaourt -R --noconfirm i3cat-git i3blocks"
   # cp /etc/X11/xinit/xinitrc ~/.xinitrc
   link:
     - "bin:.config/i3/bin"
