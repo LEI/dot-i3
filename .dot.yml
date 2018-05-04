@@ -13,7 +13,7 @@ role:
     - scrot # screenshot utility
     - thunar # file explorer (vifm)
     # - ttf-droid
-    - ttf-font-awesome
+    - otf-font-awesome # ttf has no space char
     - ttf-hack
     - ttf-roboto
     - xautolock # -time 10 -locker slock
