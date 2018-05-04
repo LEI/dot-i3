@@ -1,0 +1,4 @@
+! ~/.Xresources
+
+#include "~/.Xresources.d/colors/solarized-dark"
+#include "~/.Xresources.d/rofi"
