@@ -33,9 +33,7 @@ role:
     - "hash i3cat 2>/dev/null && yaourt -R --noconfirm i3cat-git"
   # cp /etc/X11/xinit/xinitrc ~/.xinitrc
   link:
-    - "bin:.config/i3"
-    - "config:.config/i3"
-    - "*.conf:.config/i3"
+    - ".config/i3/*:.config/i3"
     - ".Xresources"
-    - ".Xresources.d"
+    - ".Xresources.d/*:.Xresources.d"
     - ".wallpaper"
