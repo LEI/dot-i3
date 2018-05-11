@@ -23,7 +23,8 @@ i3blur() {
 
 if has i3lock
 then
-  i3blur "$@"
+  # i3blur "$@"
+  i3lock --blur=1
 elif has slock
 then
   slock

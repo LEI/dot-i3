@@ -7,6 +7,7 @@ role:
     - i3-wm # window manager
     - i3blocks
     - i3status
+    # - imagemagick # to provide convert command
     # - libnotify
     - lxappearance # gnome-themes-standard / gtk3
     - rofi # window switcher
@@ -14,6 +15,7 @@ role:
     - thunar # file explorer (vifm)
     # - ttf-droid
     - otf-font-awesome # ttf has no space char
+    - ttf-dejavu
     - ttf-hack
     - ttf-roboto
     - xautolock # -time 10 -locker slock
@@ -30,6 +32,7 @@ role:
   #   # - system-san-francisco-font-git
   install:
     - "hash i3cat 2>/dev/null || yaourt -S --noconfirm i3cat-git"
+    - "hash i3lock 2>/dev/null || yaourt -S --noconfirm i3lock-color"
     # - "yaourt -S --noconfirm arc-{firefox,icon,gtk}-theme"
   remove:
     - "hash i3cat 2>/dev/null && yaourt -R --noconfirm i3cat-git"
