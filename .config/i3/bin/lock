@@ -28,16 +28,15 @@ then
     --veriftext="Verifying..." \
     --wrongtext="Wrong!" \
     --noinputtext="No input" \
-    --ring-width 10 \
-    --ringcolor=ffffffff --insidecolor=00000000 \
-    --ringvercolor=00000011 --insidevercolor=0000001c \
-    --ringwrongcolor=00000055 --insidewrongcolor=0000001c \
-    --separatorcolor=00000000 --line-uses-inside \
-    --keyhlcolor=00000080 --bshlcolor=ff0000ff \
-    --datecolor=ffffffff --timecolor=ffffffff
-  # --verifcolor=ffffff00 --wrongcolor=ffffff00
-  # --separatorcolor=22222260 --linecolor=ffffff00
-  # --keylayout 0
+    --ring-width 10 # \
+    # --ringcolor=ffffff11 --insidecolor=00000000 \
+    # --ringvercolor=00000011 --insidevercolor=0000001c \
+    # --ringwrongcolor=00000055 --insidewrongcolor=0000001c \
+    # --separatorcolor=22222260  --line-uses-inside \
+    # --keyhlcolor=00000080 --bshlcolor=ff0000ff \
+    # --datecolor=ffffffff --timecolor=ffffffff
+  # # --verifcolor=ffffff00 --wrongcolor=ffffff00
+  # # --linecolor=ffffff00 --keylayout 0
 elif has slock
 then
   slock
