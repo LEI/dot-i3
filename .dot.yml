@@ -41,7 +41,8 @@ role:
   # localectl set-keymap fr --no-convert
   # localectl set-x11-keymap fr macintosh
   link:
-    - ".config/i3/*:.config/i3"
     - ".Xresources"
     - ".Xresources.d/*:.Xresources.d"
+    - ".config/*.conf:.config"
+    - ".config/i3/*:.config/i3"
     - ".wallpaper"

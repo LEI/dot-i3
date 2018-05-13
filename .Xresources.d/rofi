@@ -1,5 +1,6 @@
 ! Rofi
 rofi.font: Roboto 24
+!rofi.font: System San Francisco Display 18
 
 ! Enable fullscreen
 rofi.fullscreen: true
@@ -7,12 +8,12 @@ rofi.fullscreen: true
 ! Menu width in percentage
 rofi.width: 100
 
-rofi.lines: 10
+rofi.lines: 8
 
-rofi.padding: 48
+rofi.padding: 128
 
 ! Border width
-rofi.bw: 1
+rofi.bw: 0
 
 ! Row height
 rofi.eh: 1
@@ -24,7 +25,7 @@ rofi.line-margin: 8
 rofi.opacity: 90
 
 ! Separator: none, dash or solid
-rofi.separator-style: solid
+rofi.separator-style: none
 
 ! Color theme
 rofi.color-enabled: true
