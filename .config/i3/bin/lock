@@ -10,8 +10,7 @@ i3blur() {
   [[ "$?" -gt 0 ]] && icon="$1"
 
   scrot $tmpbg
-  if has convert
-  then
+  if has convert; then
     convert $tmpbg -blur 2x2 $tmpbg
     # convert $tmpbg -scale 10% -scale 1000% $tmpbg
     [[ -f "$icon" ]] && convert $tmpbg $icon -gravity center -composite -matte $tmpbg
@@ -21,24 +20,23 @@ i3blur() {
   rm $tmpbg # mktemp?
 }
 
-if has i3lock
-then
+if has i3lock; then
   # i3blur "$@"
-  i3lock --blur=1 --indicator \
+  i3lock --blur=1 \
+    --indicator \
     --veriftext="Verifying..." \
     --wrongtext="Wrong!" \
     --noinputtext="No input" \
-    --ring-width 10 # \
-    # --ringcolor=ffffff11 --insidecolor=00000000 \
-    # --ringvercolor=00000011 --insidevercolor=0000001c \
-    # --ringwrongcolor=00000055 --insidewrongcolor=0000001c \
-    # --separatorcolor=22222260  --line-uses-inside \
-    # --keyhlcolor=00000080 --bshlcolor=ff0000ff \
-    # --datecolor=ffffffff --timecolor=ffffffff
-  # # --verifcolor=ffffff00 --wrongcolor=ffffff00
-  # # --linecolor=ffffff00 --keylayout 0
-elif has slock
-then
+    --ring-width 10 \
+    --ringcolor=ffffffee --insidecolor=00000011 \
+    --ringvercolor=ffffffee --insidevercolor=00000011 \
+    --ringwrongcolor=ff0000ee --insidewrongcolor=00000011 \
+    --separatorcolor=00000011  --line-uses-inside \
+    --keyhlcolor=00ff00ee --bshlcolor=ff0000ee \
+    --verifcolor=ffffffee --wrongcolor=ffffffee
+  # --datecolor=ffffff11 --timecolor=ffffff11
+  # --linecolor=ffffff00 --keylayout 0
+elif has slock; then
   slock
 else
   exit 1
