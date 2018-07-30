@@ -7,7 +7,6 @@ role:
     - i3-wm # window manager
     - i3blocks
     - i3status
-    # - imagemagick # to provide convert command
     # - libnotify
     - lxappearance # gnome-themes-standard / gtk3
     - rofi # window switcher
@@ -31,11 +30,12 @@ role:
   #   - i3blocks # Not available on ARM
   #   # - system-san-francisco-font-git
   install:
-    - "hash i3cat 2>/dev/null || yaourt -S --noconfirm i3cat-git"
-    - "hash i3lock 2>/dev/null || yaourt -S --noconfirm i3lock-color"
+    - "if !hash i3cat 2>/dev/null; then yaourt -S --noconfirm i3cat-git; fi"
+    - "if !hash i3lock 2>/dev/null; then yaourt -S --noconfirm i3lock-color; fi"
     # - "yaourt -S --noconfirm arc-{firefox,icon,gtk}-theme"
   remove:
-    - "hash i3cat 2>/dev/null && yaourt -R --noconfirm i3cat-git"
+    - "if hash i3cat 2>/dev/null; then yaourt -R --noconfirm i3cat-git; fi"
+    - "if hash i3lock 2>/dev/null; then yaourt -R --noconfirm i3lock-color; fi"
     # - "yaourt -R --noconfirm arc-{firefox,icon,gtk}-theme"
   # cp /etc/X11/xinit/xinitrc ~/.xinitrc
   # localectl set-keymap fr --no-convert
