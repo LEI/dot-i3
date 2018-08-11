@@ -40,6 +40,9 @@ role:
   # cp /etc/X11/xinit/xinitrc ~/.xinitrc
   # localectl set-keymap fr --no-convert
   # localectl set-x11-keymap fr macintosh
+  dir:
+    - .Xresources.d
+    - .config/i3
   link:
     - ".Xresources"
     - ".Xresources.d/*:.Xresources.d"
