@@ -20,23 +20,25 @@ role:
     - xautolock # -time 10 -locker slock
     - xclip
     # - xsel
-    - xorg-xinit
-    - xorg-server
+    - name: xorg-xinit
+      action: install
+    - name: xorg-server
+      action: install
     # - xorg-server-utils
     - qt4
-  # pkg_arch: # yaourt
-  #   - i3cat-git # Requires go
-  #   # - i3lock-color # Conflicts with i3lock
-  #   - i3blocks # Not available on ARM
-  #   # - system-san-francisco-font-git
-  install:
-    - "if !hash i3cat 2>/dev/null; then yaourt -S --noconfirm i3cat-git; fi"
-    - "if !hash i3lock 2>/dev/null; then yaourt -S --noconfirm i3lock-color; fi"
-    # - "yaourt -S --noconfirm arc-{firefox,icon,gtk}-theme"
-  remove:
-    - "if hash i3cat 2>/dev/null; then yaourt -R --noconfirm i3cat-git; fi"
-    - "if hash i3lock 2>/dev/null; then yaourt -R --noconfirm i3lock-color; fi"
-    # - "yaourt -R --noconfirm arc-{firefox,icon,gtk}-theme"
+
+    # - name: i3blocks
+    #   type: yaourt
+    - name: i3cat-git
+      type: yaourt
+      # provides: i3cat
+    - name: i3lock-color
+      type: yaourt
+      # provides: i3lock
+    - name: system-san-francisco-font-git
+      type: yaourt
+    # - name: arc-{firefox,icon,gtk}-theme
+    #   type: yaourt
   # cp /etc/X11/xinit/xinitrc ~/.xinitrc
   # localectl set-keymap fr --no-convert
   # localectl set-x11-keymap fr macintosh
