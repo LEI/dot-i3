@@ -1,5 +1,6 @@
 ---
 role:
+  os: archlinux
   pkg:
     - alsa-utils # gnome-alsamixer / pavucontrol (PulseAudio)
     - compton # composite manager
