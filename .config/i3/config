@@ -247,7 +247,8 @@ assign [class="Firefox"] $workspace2
 assign [class="Skype"] $workspace9
 
 # Startup
-# exec_always --no-startup-id xrandr --output VGA-1 --mode 1600x900 # Use `xrandr` to list modes
+# Use `xrandr` to list available modes (TODO: auto detection)
+exec_always --no-startup-id xrandr --output VGA-1 --mode 1600x900
 exec --no-startup-id xautolock -time 10 -locker $config/bin/lock
 
 # exec_always --no-startup-id feh --scale ~/Pictures/wallpaper.jpg
