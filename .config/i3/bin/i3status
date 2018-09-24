@@ -11,7 +11,7 @@ on_click_event() {
   name=$(echo "$@" | i3cat decode name)
   instance=$(echo "$@" | i3cat decode instance)
 
-  echo "Click $name:$instance" >> ~/.i3debug
+  echo "Click $name:$instance" >>~/.i3debug
 
   case "$name" in
     disk_info)
@@ -37,7 +37,6 @@ i3status "$@" &
 # done) &
 
 # Read stdin from JSON click events
-cat | while read line
-do
+cat | while read -r line; do
   on_click_event "$line"
 done

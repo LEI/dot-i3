@@ -166,6 +166,9 @@ bindsym $mod+Shift+r restart
 # Exit i3 (logs you out of your X session)
 bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
 
+# Custom generic keybindings
+bindsym Print exec --no-startup-ip i3-scrot
+
 # Application shortcuts
 bindsym $mod+Shift+f exec firefox
 
@@ -244,7 +247,7 @@ assign [class="Firefox"] $workspace2
 assign [class="Skype"] $workspace9
 
 # Startup
-# exec_always --no-startup-id xrandr --output VGA-1 --mode 1680x980
+# exec_always --no-startup-id xrandr --output VGA-1 --mode 1600x900 # Use `xrandr` to list modes
 exec --no-startup-id xautolock -time 10 -locker $config/bin/lock
 
 # exec_always --no-startup-id feh --scale ~/Pictures/wallpaper.jpg
