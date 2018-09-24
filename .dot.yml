@@ -47,6 +47,7 @@ role:
     - .Xresources.d
     - .config/i3
   link:
+    - ".xinitrc"
     - ".Xresources"
     - ".Xresources.d/*:.Xresources.d"
     - ".config/*.conf:.config"
